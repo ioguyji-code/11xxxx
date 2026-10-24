@@ -1,0 +1,13 @@
+# Render Blueprint Configuration for DashCam Pro
+
+services:
+  # Option 1: Static Site (Fastest & Free)
+  - type: web
+    name: dashcam-pro
+    runtime: node
+    plan: free
+    buildCommand: npm install && npm run build
+    startCommand: node server.js
+    envVars:
+      - key: NODE_VERSION
+        value: 22
